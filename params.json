@@ -1,0 +1,53 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "openAIBackendPoolName": {
+            "value": "openai-backend-pool"
+        },
+        "openAIConfig": {
+            "value": [
+                {
+                    "name": "dalle3-1",
+                    "location": "australiaeast",
+                    "priority": 1,
+                    "weight": 50
+                },
+                {
+                    "name": "dalle3-2",
+                    "location": "swedencentral",
+                    "priority": 1,
+                    "weight": 50
+
+                }
+            ]
+        },
+        "openAIDeploymentName": {
+            "value": "dall-e-3"
+        },
+        "openAISku": {
+            "value": "S0"
+        },
+        "openAIModelName": {
+            "value": "dall-e-3"
+        },
+        "openAIModelVersion": {
+            "value": "3.0"
+        },
+        "openAIModelCapacity": {
+            "value": 2
+        },
+        "openAIAPISpecURL": {
+            "value": "https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/cognitiveservices/data-plane/AzureOpenAI/inference/preview/2024-05-01-preview/inference.json"
+        },
+        "apimResourceName": {
+            "value": "apim"
+        },
+        "apimResourceLocation": {
+            "value": "australiaeast"
+        },
+        "apimSku": {
+            "value": "Basicv2"
+        }
+    }
+}
